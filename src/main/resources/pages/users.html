@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>SELECT TEST</h1>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+    </tr>
+    <tr th:each = "name_2: ${name_2}">
+        <td th:text="${name_2.id_2}"> </td>
+        <td th:text="${name_2.Name_2}"> </td>
+    </tr>
+</table>
+
+</body>
+</html>
