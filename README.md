@@ -22,8 +22,6 @@ The app uses **JDBC** and simple **HTML/JSP** views to create, read, update, and
 - **Views:** HTML / JSP (basic pages)  
 - **IDE:** IntelliJ IDEA / Eclipse / VS Code
 
-> GitHub language stats show ~79% Java and ~21% HTML, which matches a JSP/HTML front end. :contentReference[oaicite:1]{index=1}
-
 ---
 
 ## Project Structure
