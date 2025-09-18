@@ -26,13 +26,13 @@ The app uses **JDBC** and simple **HTML/JSP** views to create, read, update, and
 
 ## Project Structure
 ```text
-├─ DOC/ # Course-related docs (if provided)
+├─ DOC/ # Course-related docs
 ├─ src/
 │ ├─ main/
 │ │ ├─ java/ # Java source (DAOs, models, servlets/controllers)
 │ │ ├─ resources/ # SQL/init/config (if used)
 │ │ └─ webapp/ # JSP/HTML/CSS (if using JSP)
-│ └─ test/ # Unit tests (optional)
+│ └─ test/ # Unit tests
 ├─ pom.xml
 ├─ mvnw / mvnw.cmd # Maven wrapper
 ```
