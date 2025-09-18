@@ -25,7 +25,7 @@ The app uses **JDBC** and simple **HTML/JSP** views to create, read, update, and
 ---
 
 ## Project Structure
-
+```text
 ├─ DOC/ # Course-related docs (if provided)
 ├─ src/
 │ ├─ main/
@@ -35,58 +35,37 @@ The app uses **JDBC** and simple **HTML/JSP** views to create, read, update, and
 │ └─ test/ # Unit tests (optional)
 ├─ pom.xml
 ├─ mvnw / mvnw.cmd # Maven wrapper
-
+```
 ## Database (PostgreSQL)
 
 ### Configuration
 
 Example `db.properties` (or similar configuration file):  
 
+```yaml
 db.url=jdbc:postgresql://localhost:5432/sem6db
 db.user=postgres
 db.password=YOUR_PASSWORD
 db.driver=org.postgresql.Driver
+```
 
 #Example SQL schema
+```sql
 CREATE DATABASE sem6db;
 \c sem6db;
-
 CREATE TABLE person (
   id SERIAL PRIMARY KEY,
   first_name VARCHAR(64) NOT NULL,
   last_name  VARCHAR(64) NOT NULL,
   email      VARCHAR(128) UNIQUE
 );
-
 CREATE TABLE address (
   id SERIAL PRIMARY KEY,
   person_id INT NOT NULL REFERENCES person(id) ON DELETE CASCADE,
   city VARCHAR(64) NOT NULL,
   street VARCHAR(128) NOT NULL
 );
-
-#Build & Run
-
-1.Configure PostgreSQL
-
-  Create database sem6db.
-  Apply schema (see SQL above).
-  Adjust user/password in your configuration file.
-
-2. Build the project
-
-./mvnw clean package
-
-3. Run the project
-
-    If web app (Servlets/JSP): deploy the generated .war file to Tomcat or GlassFish, or run via IDE.
-    Access:
-
-  http://localhost:8080/<context-path>
-
-If console app: run the main class:
-
-java -cp target/<artifact>-<version>.jar com.example.Main
+```
 
 ## Assignment Tasks
 
